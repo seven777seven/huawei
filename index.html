@@ -281,7 +281,7 @@
 				</div>
 				<div class="hr_left1_2_2">
 					<a class="new" href="">新人福利</a>
-					<a href="">会员频道</a>
+					<a class="nea" href="">会员频道</a>
 				</div>
 			</div>
 		</div>
@@ -346,7 +346,19 @@
 				</a>
 			</div>
 			<div class="hr_reght1_2">
-				<ul>JS待定</ul>
+				<div class="box">
+					<div class="t_news">
+						<b>测试</b>
+						<ul class="news_li">
+							<li><a href="#" >aaaaaa</a></li>
+							<li><a href="#" >qweqweqwe</a></li>
+							<li><a href="#" >驱蚊器问问去</a></li>
+							<li><a href="#" >驱蚊器问问去</a></li>
+							<li><a href="#" >发实发生发顺丰</a></li>
+						</ul>
+						<ul class="swap"></ul>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="hr_reght2">
@@ -619,7 +631,7 @@
 
 <!--banner_2-->
 <div class="banner_zhanwei"></div>
-<div class="banner_2">
+<div id="box2" class="banner_2">
 	<a href="">
 		<img src="img/1cUWFpu4IszZ5msj3MRP.jpg" alt="">
 	</a>
@@ -2460,11 +2472,34 @@
 <p>a</p>
 </body>
 </html>
+
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/mover.js"></script>
 <script type="text/javascript" src="js/bannerPic.js"></script>
 <script type="text/javascript">
+//新闻滚动条
+function b(){	
+	t = parseInt(x.css('top'));
+	y.css('top','19px');	
+	x.animate({top: t - 19 + 'px'},'slow');	//19为每个li的高度
+	if(Math.abs(t) == h-19){ //19为每个li的高度
+		y.animate({top:'0px'},'slow');
+		z=x;
+		x=y;
+		y=z;
+	}
+	setTimeout(b,3000);//滚动间隔时间 现在是3秒
+}
+$(document).ready(function(){
+	$('.swap').html($('.news_li').html());
+	x = $('.news_li');
+	y = $('.swap');
+	h = $('.news_li li').length * 19; //19为每个li的高度
+	setTimeout(b,3000);//滚动间隔时间 现在是3秒
+	
+})
+
 // 物品图边框阴影
 	$(document).ready(function(){
 		$(".center_rxdp_right1").mouseover(function(){
@@ -2479,7 +2514,20 @@ window.onload=function(){
     new BannerPic({
 			"boxDom":Seven("#box1"),//轮播图的容器
 			"imgs":["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg"],
-			"doudouDirection":"下"			
+			"doudouDirection":"下",
+			"left":-328,
+			"top":0,
+			"imgLeft":-328,
+			"doudouButton":50,
+			"as":["#","#","#","#","#","#","#"]			
+	});
+	// 轮播图2
+	new BannerPic({
+			"boxDom":Seven("#box2"),//轮播图的容器
+			"imgs":["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/a4.jpg","img/a5.jpg","img/a6.jpg"],
+			"doudouDirection":"下",	
+			"doudouButton":10,
+			"as":["#","#","#","#","#","#"]			
 	});
 }
 
