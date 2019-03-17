@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="css/logIn.css">
+</head>
+<body>
+<div class="beij">
+	<!-- 头部 -->
+	<div class="customer-header">
+		<div class="head_center">
+				<div class="main-logo adHeadPicContainer"> 
+					<img src="https://hwid1.vmall.com/CAS/up/idmw_rss_29/logos/HUAWEI.png" class="adHeadPic"> 
+				</div> 
+				<div class="website-name"> 
+					<b style="font-size: 18px;margin-top: -5px;float: left;color:#cccccc;">|</b> 
+					<b class="adHeadTitle">华为商城</b> 
+				</div>
+		</div>	
+	</div>
+	<!-- 广告位 -->
+	<span>
+		<div style="background: #FFFBE4;display: block;height: 40px;text-align: center;line-height: 40px;color: #989898;">
+			<span class="prompt_icon" id="ad1">依据《网络安全法》，为保障您的帐号安全与正常使用，请尽快绑定您的手机号，感谢您的理解及支持！</span>
+		</div>
+	</span>
+	<!-- 登陆 -->
+	<div class="login_bg" id="loginform">
+		<div class="login_adBg" >
+			<div class="login_right">
+				<div class="login_h">
+					<span id="hide1" class="login_h_1">账号登陆</span>
+					<span id="show1" class="login_h_2">扫码登陆</span>
+				</div>
+				<!-- 账号登陆 -->
+				<div id="hide2" class="login_center">
+					<input type="text" placeholder="手机号/邮箱地址/华为号">
+					<input type="text" placeholder="密码">
+					<div class="hhh">
+						<a href=""><span title="短信验证码登录" style="visibility: visible;"><i class="phoneIcon"></i>   短信验证码登录</span></a>
+					</div>
+					<input type="button" class="button-login" id="btnLogin" data-type="accountLogin" value="登录" tabindex="5" style="outline: none;">
+					<div class="mt-checkbox">
+						<span id="rememberNameSpan">
+							<label for="remember_name">
+								<input id="ind" type="checkbox" checked/>
+								<label for="ind">记住华为帐号</label>
+							</label>
+						</span>
+					</div>
+					<div class="zc">
+						<a href="">
+							<span>注册账号</span>
+						</a>
+						<a href="">
+							<span>忘记密码？</span>
+						</a>
+					</div>
+					<div class="qtdlfs">
+						<div class="qtdlfs_1">
+							<i class="i-left"></i>
+							<span class="span-center">其它登陆方式</span>
+							<i class="i-right"></i>
+						</div>
+						<div class="thirdLoginDiv">
+							<span class="QQ">
+								<a href=""></a>
+							</span>
+							<span class="ZFB">
+								<a href=""></a>
+							</span>
+							<span class="WX">
+								<a href=""></a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--扫码登陆 -->
+				<div id="show2" class="smdl" style="display:none">
+					<div id="divBox" style="left:109px;">
+						<img src="img/getqrWeb.png" alt="">
+					</div>	
+					<div id="yingcang" class="qrCode-help" style="opacity: 0;"></div>
+					<div class="smdl1">
+						<p>使用<span style="color:#007dff;">华为移动服务APP</span>扫一扫</p>
+						<p>若您使用华为手机，请进入“设置”>“华为帐号”扫码登录。</p>
+					</div>
+				</div>				
+		</div>
+	</div>
+	<!-- 底部 -->
+		<div class="reg-content">
+			<p class="footer">
+				<a class="rule" href="">华为账号用户协议</a>
+				<em class="foot_em">|</em>
+				<a class="rule" href="">关于华为账号隐私与隐私的声明</a>			
+				<em style="font-style: normal">|</em>
+				<a style="padding:0 10px;" href="">常见问题</a>
+		    </p>
+		    <p id="copyrightPart" class="footer">Copyright&nbsp;©&nbsp;2011-2019&nbsp;&nbsp;华为软件技术有限公司&nbsp;&nbsp;版权所有&nbsp;&nbsp;保留一切权利&nbsp;&nbsp;苏B2-20070200号&nbsp;|&nbsp;苏ICP备09062682号-9</p>
+		</div>	
+	</div>	
+</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+// 二维码
+$(document).ready(function(){
+	$("#show1").click(function(){
+	  $("#show1").css({"color":"#B40707"});
+	  $("#hide1").css({"color":"black"});
+	  $("#hide2").css({"display":"none"});
+	  $("#show2").css({"display":"block"});
+	});	 
+	$("#hide1").click(function(){
+	  $("#hide1").css({"color":"#B40707"});
+	  $("#show1").css({"color":"black"});
+	  $("#show2").css({"display":"none"});
+	  $("#hide2").css({"display":"block"});
+	});
+
+
+// 移动
+	$("#divBox").mouseenter(function(){
+		$("#divBox").animate({"left":"50px"});
+		$("#yingcang").animate({"opacity":"1"});
+	});
+	$("#divBox").mouseleave(function(){
+		$("#divBox").animate({"right":"50px"});
+		$("#yingcang").animate({"opacity":"0"});
+	});
+});
+</script>

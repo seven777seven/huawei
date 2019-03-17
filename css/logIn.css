@@ -1,0 +1,337 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,td,input,select,option,textarea{
+    margin:0;
+    padding:0;
+}
+ul,ol,li{list-style:none;}
+a,u{text-decoration:none;}
+img{border:none;}
+body{font-family:'Helvetica Neue';}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+b{
+  font-weight: normal;
+}
+
+
+/*头部*/
+.head_center {
+    width: auto;
+    max-width: 998px;
+}
+.head_center {
+    width: 998px;
+    height: 67px;
+    margin: 0px auto;
+    border: 0px;
+    position: relative;
+}
+.head_center .main-logo {
+    position: static;
+    left: 2px;
+    float: left;    
+}
+.adHeadPicContainer {
+    margin-right: 20px;
+}
+
+.head_center .main-logo img {
+    margin-left: 4px;
+    margin-top: 17px;
+}
+.website-name {
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    font-family: "arial";
+    padding-top: 14px;
+}
+.adHeadTitle {
+    color: #333333;
+    font-size: 18px;
+    margin-top: -3px;
+    float: left;
+    margin-left: 20px;
+}
+.beij{
+    background-color: #EBEBEB;
+}
+.prompt_icon {
+    background-image: url(../img/prompt.png);
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    padding: 0 20px;
+}
+
+/*扫码登陆*/
+.smdl{
+    text-align: center;
+}
+#divBox{
+    width:162px;
+    height:162px;
+    margin:0 auto;
+    margin-bottom:150px;
+    margin-top:70px;
+    position:absolute;
+}
+.smdl1{
+    margin:320px 0 24px 46px;
+    text-align: center;
+    position: absolute;
+}
+
+
+
+/*登陆*/
+.login_bg {
+	height:590px;
+    background-color: #081638;
+}
+.login_adBg{
+	height:590px;
+	background:url(../img/login_default_bg.png) no-repeat;
+}
+.login_right{
+	width:380px;
+	height:470px;
+	background:white;
+    position: relative;
+    left: 816px;
+    top: 36px;
+    padding:24px 0 24px 0;
+}
+.login_h{
+	width:380px;
+	height:20px;
+}
+.login_h_1{
+	color:#B40707;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 169px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-right:1px solid #989898;
+    padding:0 10px;
+}
+.login_h_2{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 169px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+.login_h_2:hover{
+	color:#B40707;
+}
+.login_center{
+	width:328px;
+	height:330px;
+	margin:50px 28px;
+
+}
+.login_center input[type="text"]{
+	border:none;
+    color: #333333;
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 0px;
+    outline: none;
+    width:328px;
+    height:46px;
+    border-bottom: 1px solid   rgb(204, 204, 204);
+}
+.login_center a{
+	color:#007dff;
+}
+input::-webkit-input-placeholder{  
+    color:#989898;
+ }
+ .phoneIcon{ 
+ 	background:url(../img/ic_smsLogin.png);
+    width: 11px;
+    height: 15px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: -2px 0;
+    margin-bottom: -3px;
+}
+.hhh{
+	margin-top:20px;
+	margin-bottom:20px
+}
+.themeName-red .button-login {
+    background-color: #B40707;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #B40707;
+    color: #fff;
+}
+.login_center .button-login {
+    width: 100%;
+    border-radius: 0px;
+    line-height: 44px;
+    height: 44px;
+    font-weight: bold;
+    font-size: 14px;
+    background: #B40707;
+    cursor: pointer;
+    border-radius: 26px;
+    text-align: center;
+    margin-top: 0px;
+    color:white;
+	border:none;
+}
+.form-edit-area td.mt-checkbox {
+    padding: 16px 0;
+    position: relative;
+}
+
+.mt-checkbox{
+    margin-top:20px;
+}
+.zc{
+	text-align: center;
+	margin-top:10px;
+	color:#007dff;
+}
+.zc span{
+	margin-right:10px;
+}
+#rememberNameSpan label{
+    cursor:pointer; 
+}
+
+/*底部*/
+.reg-content{
+	width:100%;
+	height:80px;
+}
+.footer{
+	margin-top:10px;
+	text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+.footer a{
+	color: #999;
+}
+
+/*其它登陆方式*/
+
+.qtdlfs{
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    color: #999;
+    line-height: 16px;
+}
+.qtdlfs_1{
+position: relative;
+    width: 328px;
+    margin-bottom: 10px;
+}
+.qtdlfs_1 .i-left{
+    left:0;
+    top:50%;
+    background-image: url(../img/thirdLine.png);
+    background-repeat: no-repeat;
+    height: 1px;
+    position: absolute;
+    width: 94px;
+    background-size: cover;
+}
+.qtdlfs_1 .span-center{
+    color: #cccccc;
+    vertical-align: middle;
+    text-align: center;
+    max-width: 190px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+.i-right{
+    right:0;
+    bottom:50%;
+    background-image: url(../img/thirdLine-reverse.png);
+    background-repeat: no-repeat;
+    height: 1px;
+    position: absolute;
+    width: 94px;
+    background-size: cover;
+}
+.thirdLoginDiv{
+    width: 328px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.thirdLoginDiv span{
+    padding: 0px 10px;
+    text-align: center;
+    display: inline-block;
+}
+/*滑动图片*/
+.qrCode-help{
+    right: 19px;
+    top:87px;
+    position: absolute;
+    display: inline-block;
+    background: url(../img/qrCode-help.png);
+    width: 130px;
+    height: 214px;
+    vertical-align: middle;
+}
+
+.QQ a{
+    background-image: url(../img/third_login.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-position: -72px -9px;
+}
+.ZFB a{
+    background-image: url(../img/third_login.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-position: -132px -9px;
+}
+.WX a{
+    background-image: url(../img/third_login.png);
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    padding: 0px;
+    display: inline-block;
+    margin: 0;
+    float: none;
+    background-position: -12px -9px;
+}
+
+.QQ a:hover {
+    background-position: -72px -55px;
+}
+.ZFB a:hover {
+    background-position: -132px -55px;
+}
+.WX a:hover {
+    background-position: -12px -55px;
+}
+

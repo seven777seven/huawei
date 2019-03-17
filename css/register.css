@@ -1,0 +1,281 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,td,input,select,option,textarea{
+    margin:0;
+    padding:0;
+}
+ul,ol,li{list-style:none;}
+a,u{text-decoration:none;}
+img{border:none; display:block;}
+body{font-family:'Helvetica Neue';}
+body, button, input, select, textarea {
+    font: 12px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+b{
+  font-weight: normal;
+}
+
+/*头部*/
+input::-webkit-input-placeholder{  
+    color:#989898;
+ }
+.head-background{
+    background-color: #333333;
+    height: 67px;
+    min-width: 960px;
+}
+.head_center{
+	width: 960px;
+    height: 67px;
+    margin: 0px auto;
+    border: 0px;
+    position: relative;
+}
+.head_center .main-logo{
+	position: static;
+}
+.head_center .main-logo {
+    left: 2px;
+    float: left;
+}
+.adHeadPicContainer {
+    margin-right: 20px;
+}
+.head_center .main-logo img{
+    margin-left: 4px;
+    margin-top: 17px;
+}
+
+.website-name{
+    color: white;
+    font-size: 20px;
+    height: 67px;
+    line-height: 50px;
+    font-family: "arial";
+    padding-top: 14px;
+}
+.wp1 {
+    width: 100%;
+    margin: 0px auto;
+    background: #f2f2f2;
+}
+
+.relative {
+    position: relative;
+}
+
+.register-content {
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 960px;
+}
+.themeName-red .phone-wrap.sel, .themeName-red .mail-wrap.sel {
+    background: #B40707;
+}
+phone-wrap, .mail-wrap {
+    display: inline-block;
+    position: relative;
+    background: #ccc;
+    margin-right: 12px;
+}
+.l {
+    float: left;
+}
+a {
+    text-decoration: none;
+    color: #b7b7b7;
+}
+.iconfont{
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: 26px;
+    width: 14px;
+    height: 22px;
+    background: url(images/reg-img01.png) no-repeat;
+    background-position: 0 -18px;
+}
+.reg-tab .tab-email, .reg-tab .tab-phone {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 30px;
+    text-align: center;
+}
+.phone-wrap, .mail-wrap {
+    display: inline-block;
+    position: relative;
+    background: #ccc;
+    margin-right: 12px;
+    background: #B40707;
+}
+.mail-icon {
+    display: inline-block;
+    position: absolute;
+    top: 9px;
+    left: 16px;
+    width: 22px;
+    height: 17px;
+    background: url(images/reg-img01.png) no-repeat;
+    background-position: 0 0px;
+}
+.reg-tab .tab-email, .reg-tab .tab-phone {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 50px;
+    margin-right: 30px;
+    text-align: center;
+}
+.login {
+    margin-top: 10px;
+    font-size: 14px;
+    float:right;
+}
+.login-a, .ar-eg-opposite {
+    color: #007dff;
+}
+.reg-detail {
+    padding: 30px 270px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+}
+.input-container {
+    margin-top: 20px;
+    background: #f7f7f7;
+    height: 42px;
+    border: 1px solid #d9d9d9;
+    border-radius: 21px;
+    position: relative;
+    *z-index: 80;
+}
+.input-container .input-left {
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: inter-ideograph;
+    width: 90px;
+        height: 100%;
+    border-right: 1px solid #d9d9d9;
+    padding: 0 16px;
+    line-height: 42px;
+}
+#chooseCountry .input-content {
+    height: 100%;
+    overflow: visible;
+}
+.input-container .input-content input {
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    padding: 0 16px;
+    background: transparent;
+    *height: 40px;
+    *line-height: 40px;
+}
+#chooseCountry .ddrop-EMU5 .select-text {
+    font-size: 15px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 16px;
+}
+.suffix {
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle;
+}
+#chooseCountry .select-ico {
+    right: 16px;
+    position: absolute;
+    top: 17px;
+}
+.select-ico {
+    width: 12px;
+    height: 6px;
+    background-image: url(../img/triangle_green.png);
+    background-size: cover;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    *zoom: 1;
+    *display: inline;
+}
+
+#chooseCountry .dpmenu-EMUI5-down {
+    top: 36px;
+}
+.dpmenu-EMU5 .flow-top {
+    position: absolute;
+    top: -1px;
+    width: 100%;
+    height: 1px;
+}
+
+input{
+	margin-left:17px;
+	width:200px;
+	height:38px;
+    background: #f7f7f7;
+    border:none;
+    outline: none;
+	font-size:16px;
+}
+
+i{
+	color:white;
+}
+/*注册按钮*/
+.reg-btn {
+    margin-top: 30px;
+    text-align: center;
+}
+.reg-btn .btn.sel {
+    background-color: #B40707;
+    border: none;
+    color: #fff;
+    border-radius:50px;
+}
+
+.box-shadow {
+    padding-top: 40px;
+    border-bottom: 1px solid #d7d7d7;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.reg-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin: 0px auto;
+    width: 960px;
+}
+.footer{
+	margin-top:20px;
+}
+
+.ft p {
+    line-height: 24px;
+    margin: 0 auto;
+}
+.ft p a {
+    font-size: 12px;
+    color: #999;
+}
+.rule {
+    padding: 0 10px;
+}
+em{
+    font-weight: normal;
+    font-style: normal;
+}
+#copyrightPart{
+	padding-bottom:20px;
+}
