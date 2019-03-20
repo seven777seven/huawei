@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册成功转页面</title>
+</head>
+<body>
+<div class="message_c_sad">
+<p>注册成功, <span id="pDom" style="color:red">5</span> 秒后自动跳转登陆页面！</p>
+<p><a href="logIn.html">如果您的浏览器没有自动跳转，请点击这里</a></p>
+</div>
+</body>
+</html>
+
+<script>
+	window.onload=function(){
+		let count=5;
+		let myTimer = setInterval(()=>{
+			count--;
+			if(count<=0){
+				window.location.href='logIn.html';
+			}
+			$("#pDom").innerHTML = count;
+		},1000);
+	}
+
+function $(str){
+    if(str.charAt(0)=="#"){
+        return document.getElementById(str.substring(1));
+    }else if(str.charAt(0)=="."){
+        return document.getElementsByClassName(str.substring(1));
+    }else{
+        return document.getElementsByTagName(str);
+    }
+}	
+</script>

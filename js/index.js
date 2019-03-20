@@ -29,29 +29,59 @@ $(document).ready(function(){
 			$(this).css({boxShadow:"0 0 0 rgba(0,0,0,0.1)",transition:"0.5s"})
 		})
 	})
-	
-// 轮播图
+
+
+
+
 window.onload=function(){
-    new BannerPic({
+	// 轮播图1
+	let pt=[];//定义放图片的数组
+	// ajax请求
+	// 1.创建对象
+	let xhr=new XMLHttpRequest();
+	// 2.设置请求参数(请求的地址，请求的方式)
+	xhr.open("get","goodsAndShoppingCart/getGoodsList.php","true");
+	// 3.设置回调函数(服务器端响应回来后，调用的函数);
+	xhr.onreadystatechange=function(){
+		let pts;
+		if(xhr.readyState==4 && xhr.status==200){
+			pts=(JSON.parse(xhr.responseText));//后端发来的数据，php中用echo。
+		}
+		for(let i=0;i<pts.length;i++){
+			for(let key in pts[i]){
+				if(key=="goodsImg"){
+					pt.push(`img/${pts[i][key]}`);
+				}
+			}
+		}
+
+		new BannerPic({
 			"boxDom":Seven("#box1"),//轮播图的容器
-			"imgs":["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg"],
+			"imgs":pt,//数据库请求到的图片数组
 			"doudouDirection":"下",
 			"left":-328,
 			"top":0,
 			"imgLeft":-328,
 			"doudouButton":50,
 			"as":["#","#","#","#","#","#","#"]			
-	});
+		});
+	}
+// 4.发送请求
+	xhr.send()
 
-// 轮播图2
-	new BannerPic({
-			"boxDom":Seven("#box2"),//轮播图的容器
-			"imgs":["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/a4.jpg","img/a5.jpg","img/a6.jpg"],
-			"doudouDirection":"下",	
-			"doudouButton":10,
-			"as":["#","#","#","#","#","#"]			
-	});
+
+
+	
+	//轮播图2
+	// new BannerPic({
+	// 		"boxDom":Seven("#box2"),//轮播图的容器
+	// 		"imgs":["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/a4.jpg","img/a5.jpg","img/a6.jpg"],
+	// 		"doudouDirection":"下",	
+	// 		"doudouButton":10,
+	// 		"as":["#","#","#","#","#","#"]			
+	// });
 }
+
 
 
 function Seven(str){

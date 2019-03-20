@@ -225,7 +225,8 @@ input{
     background: #f7f7f7;
     border:none;
     outline: none;
-	font-size:16px;
+    font-size:16px;
+    margin-top:2px;
 }
 
 i{

@@ -147,6 +147,20 @@ b{
     height:46px;
     border-bottom: 1px solid   rgb(204, 204, 204);
 }
+.login_center input[type="password"]{
+    border:none;
+    color: #333333;
+    font-size: 14px;
+    height: 46px;
+    line-height: 46px;
+    border-radius: 0px;
+    outline: none;
+    width:328px;
+    height:46px;
+    border-bottom: 1px solid   rgb(204, 204, 204);
+}
+
+
 .login_center a{
 	color:#007dff;
 }
