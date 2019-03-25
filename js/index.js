@@ -17,7 +17,7 @@ $(document).ready(function(){
 	y = $('.swap');
 	h = $('.news_li li').length * 19; //19为每个li的高度
 	setTimeout(b,3000);//滚动间隔时间 现在是3秒
-	
+
 })
 
 // 物品图边框阴影
@@ -36,6 +36,7 @@ $(document).ready(function(){
 window.onload=function(){
 	// 轮播图1
 	let pt=[];//定义放图片的数组
+	let pt2=[];//第二个轮播图的数组
 	// ajax请求
 	// 1.创建对象
 	let xhr=new XMLHttpRequest();
@@ -47,14 +48,26 @@ window.onload=function(){
 		if(xhr.readyState==4 && xhr.status==200){
 			pts=(JSON.parse(xhr.responseText));//后端发来的数据，php中用echo。
 		}
+		//第一个轮播图
 		for(let i=0;i<pts.length;i++){
 			for(let key in pts[i]){
 				if(key=="goodsImg"){
+					if(pts[i][key]==""){
+						continue;
+					}
 					pt.push(`img/${pts[i][key]}`);
 				}
+				//第二个轮播图
+				if(key=="beiyong1"){
+					if(pts[i][key]==""){
+						continue;
+					}
+					pt2.push(`img/${pts[i][key]}`);
+				}
 			}
-		}
 
+		}
+		//轮播图1
 		new BannerPic({
 			"boxDom":Seven("#box1"),//轮播图的容器
 			"imgs":pt,//数据库请求到的图片数组
@@ -63,23 +76,19 @@ window.onload=function(){
 			"top":0,
 			"imgLeft":-328,
 			"doudouButton":50,
-			"as":["#","#","#","#","#","#","#"]			
+			"as":["#","#","#","#","#","#","#"]		
+		});
+		// 轮播图2
+		new BannerPic({
+			"boxDom":Seven("#box2"),//轮播图的容器
+			"imgs":pt2,
+			"doudouDirection":"下",	
+			"doudouButton":10,
+			"as":["#","#","#","#","#","#"]			
 		});
 	}
 // 4.发送请求
 	xhr.send()
-
-
-
-	
-	//轮播图2
-	// new BannerPic({
-	// 		"boxDom":Seven("#box2"),//轮播图的容器
-	// 		"imgs":["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/a4.jpg","img/a5.jpg","img/a6.jpg"],
-	// 		"doudouDirection":"下",	
-	// 		"doudouButton":10,
-	// 		"as":["#","#","#","#","#","#"]			
-	// });
 }
 
 
